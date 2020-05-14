@@ -8,7 +8,9 @@ export default class ContentsHeader extends React.Component {
           <h1>{`< ${this.props.groupName} >`}</h1>
         </div>
         <div className="contents-header-showinglist">
-          <button className="contents-header__btns">
+          <button 
+          className="contents-header__btns"
+          aria-label="보기방식 변환">
             <i className="fas fa-bars"></i>
           </button>
         </div>
@@ -18,7 +20,9 @@ export default class ContentsHeader extends React.Component {
           </button>
         </div>
         <div className="contents-header-invite">
-          <button className="contents-header__btns">
+          <button 
+          className="contents-header__btns"
+          aria-label="그룹생성">
             <i className="fas fa-user-plus"></i>
           </button>
         </div>

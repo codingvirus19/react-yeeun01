@@ -22,6 +22,7 @@ export default class HeaderAddMemo extends React.Component {
       <div className="header-addmemo">
         <button
           className="header-memo_btn"
+          aria-label="메모추가"
           onClick={this.togglePopup.bind(this)}
         >
           <i className="fas fa-plus"></i>

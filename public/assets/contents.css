@@ -48,6 +48,7 @@
 }
 /* contents-header */
 
+/*contentsMemo*/
 .contents-memo {
   height: 67%;
   width: 91%;
@@ -55,6 +56,12 @@
   border: 0.5px solid black;
   padding: 5% 4%;
 }
+
+.hashSheet {
+  position: relative;
+  bottom: 10px;
+}
+/*contentsMemo*/
 
 .memo_container {
   border: 0.1px solid black;
@@ -72,16 +79,32 @@
   border-radius: 8px;
 }
 
-.hash {
-  width: 70px;
-  min-width: 60px;
-  height: 18px; 
-  padding: 3px 5px;
-  border: 1px solid black;
-  border-radius: 8px;
+/*HashList*/
+.hashlist {
+  padding: 3px 0px;
+  display: flex;
 }
 
+.hash {
+  margin: auto 4px;
+  width: 70px;
+  max-width: 150px;
+  height: 18px; 
+  display: inline-block;
+  padding: 3px 5px;
+  border: 1px solid rgba(170, 155, 155, 0.452);
+  background-color: rgb(226, 226, 226);
+  border-radius: 8px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+/*HashList*/
+
 /*Toolbar*/
+.toolbar {
+  height: 30px;
+}
 .shareSheet,
 .colorSheet{
   position: absolute;
@@ -90,10 +113,8 @@
 }
 
 button.tool {
-  margin: 0 5px;
+  margin: 3px 5px 0px 5px;
   cursor: pointer;
-  /* width: 32px;
-  height: 32px; */
 }
 
 .fa-slideshare:before,
@@ -108,20 +129,6 @@ button.tool {
   width: 32px;
   height: 32px;
 }
-
-[aria-label]:after {
-  content: attr(aria-label);
-  display: none;
-  /* top: 340px; */
-  position: absolute;
-  background-color: hsla(64, 73%, 39%, 0.725);
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
-}
-
-[aria-label]:hover:after, [aria-label]:focus:after {
-  display: block;
-  padding: 1px;
-  }
 /*Toolbar*/
 
 /*GroupShare*/
@@ -246,6 +253,12 @@ input.groupShare_input:not(:last-child),
   background-color: #ea232c;
 }
 /*GroupShare*/
+
+/*HashSheet*/
+.searchHash {
+
+}
+/*HashSheet*/
 
 /* 238x160 */
 /* @import url(https://fonts.googleapis.com/css?family=BenchNine:700);

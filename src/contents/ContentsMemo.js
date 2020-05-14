@@ -2,7 +2,7 @@ import React from "react";
 
 import Memo from "./Memo";
 import HashList from "./HashList";
-import Toolbar from "./Toolbar";
+import Toolbar from "./toolbar/Toolbar";
 
 export default class ContentsMemo extends React.Component {
 
@@ -11,21 +11,46 @@ export default class ContentsMemo extends React.Component {
     this.state = {
       내용: null,
       showHashsheet: false,
-      hashSheet: null
+      hashKeyword: "",
     }
   }
 
   onNotifyShowHashsheetChange(showHashsheet) {
     this.setState({
-      showHashsheet: showHashsheet
+      showHashsheet
     })
   }
 
+  onInputChange(e) {
+    this.setState({
+      hashKeyword: e.target.value
+    })
+  };
+
+
   render() {
+    let hashSheet;
+    console.log("render");
+    console.log(this.state.showHashsheet);
 
     if (this.state.showHashsheet) {
-      this.state.hashSheet = (
-        <div className="hashSheet">a</div>
+      // if (true) {
+      hashSheet = (
+        <div className="hashSheet">
+          <input
+            type='text'
+            value={this.hashKeyword}
+            placeholder="해시 태그 검색"
+            onChange={this.onInputChange.bind(this)} />
+
+          {this.props.hash &&
+            this.props.hash
+              .filter(element => element.hash_name.indexOf(this.state.hashKeyword) != -1)
+              .map(({ no, hash_name }) => (
+                <div key={no}>{hash_name}</div>
+              ))}
+
+        </div>
       )
     }
     return (
@@ -39,7 +64,7 @@ export default class ContentsMemo extends React.Component {
                 showHashsheet={this.state.showHashsheet}
                 notifyShowHashsheetChangeHandler={this.onNotifyShowHashsheetChange.bind(this)} />
             </form>
-            {this.state.hashSheet}
+            {hashSheet}
           </div>
         ))}
       </div>
