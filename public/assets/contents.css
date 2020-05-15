@@ -57,12 +57,6 @@
   padding: 5% 4%;
 }
 
-.hashSheet {
-  position: relative;
-  bottom: 10px;
-}
-/*contentsMemo*/
-
 .memo_container {
   border: 0.1px solid black;
   margin: 10px;
@@ -71,13 +65,16 @@
 .container_memo-form {
   padding: 10px;
 }
+/*contentsMemo*/
 
+/*Memo*/
 .memo {
   border: 0.4px solid rgb(170, 155, 155);
   width: 220px;
   height: 160px;
   border-radius: 8px;
 }
+/*Memo*/
 
 /*HashList*/
 .hashlist {
@@ -105,12 +102,6 @@
 .toolbar {
   height: 30px;
 }
-.shareSheet,
-.colorSheet{
-  position: absolute;
-  background-color: #f5f5f5d0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
 
 button.tool {
   margin: 3px 5px 0px 5px;
@@ -131,134 +122,16 @@ button.tool {
 }
 /*Toolbar*/
 
-/*GroupShare*/
-.header-groupShare {
-  margin-right: 1.8rem;
+/*Sheet*/
+.groupShareSheet,
+.shareSheet,
+.colorSheet,
+.hashSheet{
+  position: absolute;
+  background-color: #f5f5f5;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-
-.popup-groupShare {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.popup-groupShare_inner {
-  background: #f5f5f5;
-  margin: auto;
-  width: 100%;
-  max-width: 40%;
-  min-width: 340px;
-  height: 28.125rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.inner_groupShare-header,
-.inner_form-container {
-  width: 100%;
-  max-width: 70%;
-  min-width: 173px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* 가로 중앙에 자식을 배치 */
-  justify-content: center;
-  /* 세로에서 가운데에 자식을 배치 */
- }
-
-.inner_groupShare-header {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  height: 13%;
-}
-
-.groupShare_h1 {
-  color: #4e73df;
-  margin: auto;
-}
-
-.inner_form-container {
-  height: 70%;
-}
-
-.inner_form-control {
-  width: 80%;
-}
-
-.inner_form-container p {
-  position: relative;
-}
-
-.groupShare_input-button {
-  height: 11%;
-  width: 80%;
-}
-
-input.groupShare_input {
-  height: 100%;
-  width: 85%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 0.25rem;
-  border: none;
-  background-color: #fff;
-}
-
-.groupShare_input-btn {
-  height: 100%;
-  width: 15%;
-}
-
-input.groupShare_input:not(:last-child), 
-.inner_form-control,
-.groupShare_input-button {
-  margin-bottom: 5%;
-}
-
-.groupShare_confirm-btn,
-.groupShare_cancel-btn {
-  height: 100%;
-  width: 40%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 0.25rem;
-  border: none;
-  color: #fff;
-}
-
-.groupShare_btns {
-  height: 11%;
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.groupShare_confirm-btn {
-  background-color: #3498db;
-  margin-right: 10%;
-}
-
-.groupShare_cancel-btn {
-  background-color: #ea232c;
-}
-/*GroupShare*/
-
-/*HashSheet*/
-.searchHash {
-
-}
-/*HashSheet*/
+/*Sheet*/
 
 /* 238x160 */
 /* @import url(https://fonts.googleapis.com/css?family=BenchNine:700);

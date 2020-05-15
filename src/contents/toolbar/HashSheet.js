@@ -1,6 +1,20 @@
 import React from "react";
 
 export default class HashSheet extends React.Component {
+
+constructor() {
+  super(...arguments);
+  this.state = {
+    hashKeyword: ""
+  }
+}
+
+onInputChange(e) {
+  this.setState({
+    hashKeyword: e.target.value
+  })
+};
+
   render() {
     return (
       <div className="hashSheet">

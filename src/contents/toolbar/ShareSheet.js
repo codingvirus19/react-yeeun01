@@ -5,7 +5,7 @@ import Table from "react-bootstrap/Table"
 export default class ShareSheet extends React.Component {
 
     onMouseChange(e){
-        this.props['toggleSharesheetHandler'](e)
+        this.props['toggleShareSheetHandler'](e)
     }
 
     render() {

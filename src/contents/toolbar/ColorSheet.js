@@ -5,7 +5,7 @@ import Table from "react-bootstrap/Table"
 export default class ColorSheet extends React.Component {
 
     onMouseChange(e){
-        this.props['toggleColorsheetHandler'](e)
+        this.props['toggleColorSheetHandler'](e)
     }
 
     render() {
